@@ -32,7 +32,7 @@ if __name__ == '__main__':
     # transform to DataFrame
     df_data = pd.DataFrame(data['hourly'])
 
-
+    #add other attributes to the df
     df_data['latitude'] = data['latitude']
     df_data['longitude'] = data['longitude']
     df_data['generationtime_ms'] = data['generationtime_ms']
