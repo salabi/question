@@ -7,6 +7,9 @@ import pyarrow.parquet as pq
 endpoint = "https://api.open-meteo.com/v1/forecast?latitude=51.5085&longitude=-0.1257&hourly=temperature_2m,rain,showers,visibility&past_days=31"
 
 def fectch_data (endpoint : str) -> str:
+    '''
+    fetches api data from endpoint provide
+    '''
     response = requests.get(endpoint)
     response.raise_for_status() # check for success
     data = response.json()
